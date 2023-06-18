@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fakeOS - Convert</title>
+    <link rel="stylesheet" href="../styles/convert.css">
+</head>
+<body>
+    <header>
+        <h1>Convert</h1>
+        <h2>A simple converter app</h2>
+    </header>
+
+    <main>
+        <section class="input-section">
+            <p>Please select the units you'd like to convert...</p>
+            <form class="input-section__form">
+                <select 
+                    name="units" 
+                    id="units" 
+                    placeholder="Celsius"
+                    required
+                >
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kilograms">Kilograms</option>
+                    <option value="Pounds">Pounds</option>
+                </select>
+                <label for="value">Please enter a value:</label>
+                <input 
+                    name="value" 
+                    id="value"
+                    type="number"
+                    placeholder="0" 
+                    required 
+                />
+                <input id="submitBtn" type="submit" value="Submit" />
+            </form>
+        </section>
+    </main>
+</body>
+</html>

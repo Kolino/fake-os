@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-section {
+    margin-bottom: 1rem;
+}
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+    &__btn {
+        width: 15%;
+    }
+}
