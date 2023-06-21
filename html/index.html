@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>fakeOS - Home</title>
-        <link rel="stylesheet" href="../styles/styles.css">
-        <script></script>
+        <link rel="stylesheet" href="../styles/index.css">
+        <script src="../scripts/index.js" type="module" defer></script>
         <script src="https://kit.fontawesome.com/aedbd09010.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -21,7 +21,7 @@
                     <i class="fa-solid fa-wifi"></i>
                 </div>
                 <div class="top-bar__time">
-                    <p>9:42 AM</p>
+                    <!-- JS adds time here -->
                 </div>
                 <div class="top-bar__bt-charge">
                     <i class="top-bar__bt-charge__bt fa-brands fa-bluetooth-b"></i>
@@ -61,21 +61,24 @@
                 </figure>
                 <!-- The three apps that actually do something -->
                 <figure class="apps__app">
-                    <a href="./convert.html">
+                    <!-- <a href="./convert.html">
                         <img class="apps__app__img" src="../images/convert-app" />
-                    </a>
+                    </a> -->
+                    <img class="apps__app__img" id="convertAppImg" src="../images/convert-app" />
                     <figcaption class="apps__app__caption">Convert</figcaption>
                 </figure>
                 <figure class="apps__app">
-                    <a href="./to-do.html">
+                    <!-- <a href="./to-do.html">
                         <img class="apps__app__img" src="../images/to-do-app.idaoaszk-1796779427" />
-                    </a>
+                    </a> -->
+                    <img class="apps__app__img" id="toDoAppImg" src="../images/to-do-app.idaoaszk-1796779427" />
                     <figcaption class="apps__app__caption">To Do</figcaption>
                 </figure>
                 <figure class="apps__app">
-                    <a href="./coin-flip.html">
+                    <!-- <a href="./coin-flip.html">
                         <img class="apps__app__img" src="../images/coin-flip" />
-                    </a>
+                    </a> -->
+                    <img class="apps__app__img" id="coinFlipAppImg" src="../images/coin-flip" />
                     <figcaption class="apps__app__caption">Coin Flip</figcaption>
                 </figure>
             </section>

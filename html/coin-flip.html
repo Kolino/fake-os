@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fakeOS - Coin Flip</title>
     <link rel="stylesheet" href="../styles/coin-flip.css">
+    <script src="../scripts/coin-flip.js" type="module" defer></script>
+    <script src="https://kit.fontawesome.com/aedbd09010.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- <a href=./index.html><i class="fa-solid fa-arrow-left"></i></a> -->
+    <i class="fa-solid fa-arrow-left" id="backArrow"></i>
+
     <header>
         <h1>Coin Flip</h1>
         <h2>A simple coin flip app</h2>
     </header>
 
     <main>
-        <button>Flip the coin!</button>
+        <section class="sctn input-section">
+            <button class="btn" id="flipBtn">Flip the coin!</button> 
+        </section>
+        <section class="sctn result-section">
+            <!-- Result and output generated here by JS -->
+        </section>
     </main>
 </body>
 </html>

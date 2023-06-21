@@ -20,8 +20,10 @@ header {
 .output-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .output-section__btn {
+  margin-top: 0.5rem;
   width: 15%;
 }
 

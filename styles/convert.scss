@@ -1,6 +1,6 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -14,5 +14,9 @@ header {
 }
 
 .input-section {
+    margin-bottom: 1rem;
+}
 
+.output-section {
+    text-align: center;
 }
