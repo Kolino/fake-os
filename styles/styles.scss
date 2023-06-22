@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: rgb(230, 230, 230);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -28,6 +27,10 @@ body {
 }
 
 .home-sctn {
+    // TODO: find a better way to do this
+    * {
+        color: rgb(230, 230, 230);
+    }
     &__top-bar {
         @include m.flex(space-between, center);
         background-color: gray;
