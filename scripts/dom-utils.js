@@ -1,18 +1,15 @@
-export const appendTextEl = (elType, text, parent, classes = []) => {
-    const textEl = document.createElement(elType);
-    textEl.classList.add(...classes);
-    
-    const textNode = document.createTextNode(text);
+export const switchView = (currView, nextView) => {
+    currView.classList.remove(["curr-view"]);
+    currView.classList.add(["not-in-view"]);
 
-    textEl.appendChild(textNode);
-    parent.appendChild(textEl);
-}
+    nextView.classList.remove(["not-in-view"]);
+    nextView.classList.add(["curr-view"]);
+};
 
-export const appendImgEl = (imgSrc, parent, classes = []) => {
-    const imgEl = document.createElement("img");
-    imgEl.classList.add(...classes);
+export const appendTextEl = (elType, text, parent) => {
+    const newEl = document.createElement(elType);
+    const newElText = document.createTextNode(text);
 
-    imgEl.src = imgSrc;
-
-    parent.appendChild(imgEl);
-}
+    newEl.appendChild(newElText);
+    parent.appendChild(newEl);
+};

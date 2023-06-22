@@ -1,10 +1,20 @@
-export const displayTime = (hours, minutes) => {
-    if (isNaN(hours) || isNaN(minutes)) return "-1";
-    if (hours < 0 || hours > 23) return "-1";
-    if (minutes < 0 || minutes > 59) return "-1";
-
-    const isPm = hours >= 12;
-    const addZero = minutes < 10;
-
-    return `${hours}:${addZero ? "0" + minutes : minutes} ${isPm ? "PM" : "AM"}`;
+export const computeConversion = (unitsToConvert, val) => {
+    // Checking for invalid input
+    if (typeof unitsToConvert !== "string" || isNaN(val))
+        return "error";
+    
+    if (unitsToConvert === "celsius")
+        return val * (9 / 5) + 32;
+    
+    if (unitsToConvert === "fahrenheit")
+        return (val - 32) * 5 / 9;
+    
+    if (unitsToConvert === "kilograms")
+        return val * 2.205;
+    
+    if (unitsToConvert === "pounds")
+        return val / 2.205;
+    
+    // Invalid unit was given
+    return "error";
 };
