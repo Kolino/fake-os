@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fakeOS</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/script.js" type="module" defer></script>
+    <script src="https://kit.fontawesome.com/aedbd09010.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Home page -->
+    <section class="page home-sctn">
+        <div class="home-sctn__top-bar">
+            <div class="home-sctn__top-bar__network-data">
+                <i class="fa-solid fa-signal"></i>
+                <p>AT&T</p>
+                <i class="fa-solid fa-wifi"></i>
+            </div>
+            
+            <div class="home-sctn__top-bar__time">
+                <!-- Script adds time here -->
+            </div>
+
+            <div class="home-sctn__top-bar__bt-charge">
+                <i class="home-sctn__top-bar__bt-charge__bt fa-brands fa-bluetooth-b"></i>
+                <i class="home-sctn__top-bar__bt-charge__charge fa-solid fa-battery-full"></i>
+            </div>
+        </div>
+
+        <div class="home-sctn__apps">
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/text-app.png" />
+                <figcaption class="home-sctn__apps__app__caption">SMS</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/photos-app" />
+                <figcaption class="home-sctn__apps__app__caption">Photos</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/calendar-app" />
+                <figcaption class="home-sctn__apps__app__caption">Calendar</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/camera-app" />
+                <figcaption class="home-sctn__apps__app__caption">Camera</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/youtube-app" />
+                <figcaption class="home-sctn__apps__app__caption">YouTube</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/stocks-app.jpeg" />
+                <figcaption class="home-sctn__apps__app__caption">Stocks</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img class="home-sctn__apps__app__img" src="./images/notes-app" />
+                <figcaption class="home-sctn__apps__app__caption">Notes</figcaption>
+            </figure>
+
+            <!-- The following three apps are the functional ones -->
+            <figure class="home-sctn__apps__app">
+                <img 
+                    class="home-sctn__apps__app__img home-sctn__apps__app__img--functional" 
+                    id="convertAppImg" 
+                    src="./images/convert-app" 
+                />
+                <figcaption class="home-sctn__apps__app__caption">Convert</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img 
+                    class="home-sctn__apps__app__img home-sctn__apps__app__img--functional" 
+                    id="toDoAppImg" 
+                    src="./images/to-do-app.idaoaszk-1796779427" 
+                />
+                <figcaption class="home-sctn__apps__app__caption">To Do</figcaption>
+            </figure>
+            <figure class="home-sctn__apps__app">
+                <img 
+                    class="home-sctn__apps__app__img home-sctn__apps__app__img--functional" 
+                    id="coinFlipAppImg" 
+                    src="./images/coin-flip" 
+                />
+                <figcaption class="home-sctn__apps__app__caption">Coin Flip</figcaption>
+            </figure>
+        </div>
+
+        <div class="home-sctn__btm-bar">
+            <figure class="home-sctn__btm-bar__app">
+                <img class="home-sctn__btm-bar__app__img" src="../images/phone-app" />
+                <figcaption class="home-sctn__btm-bar__app__caption">Phone</figcaption>
+            </figure>
+            <figure class="home-sctn__btm-bar__app">
+                <img class="home-sctn__btm-bar__app__img" src="../images/mail-app.com-iphone-mail-gmail-technology-email-633187647" />
+                <figcaption class="home-sctn__btm-bar__app__caption">Mail</figcaption>
+            </figure>
+            <figure class="home-sctn__btm-bar__app">
+                <img class="home-sctn__btm-bar__app__img" src="../images/safari-app" />
+                <figcaption class="home-sctn__btm-bar__app__caption">Safari</figcaption>
+            </figure>
+            <figure class="home-sctn__btm-bar__app">
+                <img class="home-sctn__btm-bar__app__img" src="../images/music-app" />
+                <figcaption class="home-sctn__btm-bar__app__caption">Music</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Convert app -->
+    <section class="page convert-sctn">
+        <i class="fa-solid fa-arrow-left" id="convertBack"></i>
+
+        <h2>Coolvert</h2>
+        <p>A simple converter app</p>
+
+        <div class="convert-sctn__input">
+            <form class="convert-sctn__input__form">
+                <label for="units">Please enter a unit for the value to be converted:</label>
+                <select name="units" id="units" placeholder="Celsius" required>
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kilograms">Kilograms</option>
+                    <option value="pounds">Pounds</option>
+                </select>
+                <br>
+                <label for="convertVal">Please enter a value to convert:</label>
+                <input 
+                    name="convertVal" 
+                    id="convertVal" 
+                    type="number" 
+                    placeholder="0" 
+                    required 
+                />
+                <input id="convertSubmitBtn" type="submit" value="Convert" />
+            </form>
+        </div>
+
+        <div class="convert-sctn__output">
+            <!-- Script generates output here -->
+        </div>
+    </section>
+
+    <!-- To do app -->
+    <section class="page to-do-sctn">
+        <i class="fa-solid fa-arrow-left" id="toDoBack"></i>
+
+        <h2>To Do</h2>
+        <p>A simple to do list app</p>
+
+        <div class="to-do-sctn__input">
+            <form class="to-do-sctn__input__form">
+                <input
+                    name="addToDo"
+                    id="addToDo"
+                    type="text"
+                    placeholder="Add task to do later here..."
+                    required
+                />
+                <input id="submitBtn" type="submit" value="Add task" />
+            </form>
+        </div>
+
+        <div class="to-do-sctn__output">
+            <p>Things left to do:</p>
+            <ol class="to-do-sctn__output__list">
+                <!-- Script adds to do's here -->
+            </ol>
+            <button id="removeToDoBtn">Remove</button>
+        </div>
+    </section>
+
+    <!-- Coin flip app -->
+    <section class="page coin-flip-sctn">
+        <i class="fa-solid fa-arrow-left" id="coinFlipBack"></i>
+
+        <h2>Cool Flip</h2>
+        <p>A simple coin flip app</p>
+        
+        <div class="coin-flip-sctn__input">
+            <button class="btn" id="flipBtn">Flip the coin!</button>
+        </div>
+
+        <div class="coin-flip-sctn__output">
+            <!-- Script displays coin result here -->
+        </div>
+    </section> 
+</body>
+</html>

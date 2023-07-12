@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+.curr-view {
+  z-index: 1;
+  opacity: 1;
+}
+
+.not-in-view {
+  z-index: 0;
+  opacity: 0;
+}
+
+.home-sctn * {
+  color: rgb(230, 230, 230);
+}
+.home-sctn__top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: gray;
+  padding: 1px;
+}
+.home-sctn__top-bar__network-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  flex-direction: row;
+}
+.home-sctn__top-bar__network-data * {
+  padding: 2px;
+}
+.home-sctn__top-bar__time {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+.home-sctn__top-bar__bt-charge {
+  padding-right: 0.25rem;
+}
+.home-sctn__top-bar__bt-charge__bt {
+  font-size: 1.25rem;
+}
+.home-sctn__top-bar__bt-charge__charge {
+  font-size: 1.25rem;
+}
+.home-sctn__apps {
+  margin-top: 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+}
+.home-sctn__apps__app {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-direction: column;
+}
+.home-sctn__apps__app__img {
+  width: 4rem;
+}
+.home-sctn__apps__app__caption {
+  font-size: 0.8rem;
+}
+.home-sctn__btm-bar {
+  width: 100%;
+  background-color: grey;
+  padding-top: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: normal;
+  flex-direction: row;
+}
+.home-sctn__btm-bar__app {
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-direction: column;
+}
+.home-sctn__btm-bar__app__img {
+  width: 4.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.convert-sctn {
+  background-color: green;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-direction: column;
+}
+.convert-sctn__input {
+  margin-bottom: 1rem;
+}
+.convert-sctn__output {
+  text-align: center;
+}
+
+.to-do-sctn {
+  background-color: purple;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-direction: column;
+}
+.to-do-sctn__input {
+  margin-bottom: 0.5rem;
+}
+
+.coin-flip-sctn {
+  background-color: blue;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  flex-direction: column;
+}
+.coin-flip-sctn__output {
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: row;
+}
+.coin-flip-sctn__output__img {
+  margin-top: 0.5rem;
+  width: 50%;
+}
+
+/*# sourceMappingURL=styles.css.map */

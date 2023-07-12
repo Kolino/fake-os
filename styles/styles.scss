@@ -1,0 +1,123 @@
+@use "./mixins.scss" as m;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.page {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.curr-view {
+    z-index: 1;
+    opacity: 1;
+}
+
+.not-in-view {
+    z-index: 0;
+    opacity: 0;
+}
+
+.home-sctn {
+    // TODO: find a better way to do this
+    * {
+        color: rgb(230, 230, 230);
+    }
+    &__top-bar {
+        @include m.flex(space-between, center);
+        background-color: gray;
+        padding: 1px;
+        &__network-data {
+            @include m.flex(space-between);
+            * {
+                padding: 2px;
+            }
+        }
+        &__time {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        &__bt-charge {
+            padding-right: 0.25rem;
+            &__bt {
+                font-size: 1.25rem;
+            }
+            &__charge {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__apps {
+        margin-top: 0.25rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        &__app {
+            margin-top: 0.5rem;
+            @include m.flex(normal, center, column);
+            &__img {
+                width: 4rem;
+            }
+            &__caption {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    &__btm-bar {
+        width: 100%;
+        background-color: grey;
+        padding-top: 0.5rem;
+        position: absolute;
+        bottom: 0;
+        @include m.flex(space-around, normal);
+        &__app {
+            @include m.flex(normal, center, column);
+            &__img {
+                width: 4.75rem;
+                margin-bottom: 0.75rem;
+            }
+        }
+    }
+}
+
+.convert-sctn {
+    background-color: green;
+    @include m.flex(normal, center, column);
+    &__input {
+        margin-bottom: 1rem;
+    }
+    &__output {
+        text-align: center;
+    }
+}
+
+.to-do-sctn {
+    background-color: purple;
+    @include m.flex(normal, center, column);
+    &__input {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.coin-flip-sctn {
+    background-color: blue;
+    @include m.flex(normal, center, column);
+    &__output {
+        @include m.flex(center);
+        &__img {
+            margin-top: 0.5rem;
+            width: 50%;
+        }
+    }
+}
